@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+:root {
+    --main-color: #10cab7;
+    --main-transition: 0.3s
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+html {                                                                                                                                                                                                                                                           
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+}
+.container {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small Screens */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium Screens */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large Screens */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* start the header */
+.header {
+    padding: 1.25rem;
+}
+.header .container .links  {
+    position: relative;
+}
+.header .container .links:hover .icons span:nth-child(2) {
+    width: 100%;
+}
+.header .container .links ul {
+    background-color: #F6F6f6;
+    position: absolute;
+    right: 0;
+    width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+}
+.header .container .links:hover ul {
+    display: block;
+}
+.header .container .links ul:before {
+    content: "";
+    position: absolute;
+    border-width: 0.9375rem;
+    border-style: solid;
+    border-color: transparent transparent #F6F6f6 transparent;
+    top: -30px;
+    right: 0;
+}
+.header .container .links ul li {
+    transition: var(--main-transition);
+}
+.header .container .links ul li a {
+    display: block;
+    color: black;
+    padding: 1rem;
+    transition: var(--main-transition);
+}
+.header .container .links ul li:hover {
+    padding-left: 0.9375rem;
+}
+.header .container .links ul li:not(:last-child) a {
+    border-bottom: 2px solid #ddd;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .container .logo {
+    width: 70px;
+}
+.header .container .icons {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header .container .icons span {
+    background-color: #333;
+    margin-bottom: 0.3125rem;
+    height: 2.5px
+}
+.header .container .icons span:first-child,
+.header .container .icons span:last-child  {
+    width: 100%;
+}
+.header .container .icons span:nth-child(2) {
+    width: 60%;
+    transition: var(--main-transition);
+}
+/* start the landing */
+.landing {
+    background-image: url("../images/landing.jpg");
+    background-size: cover;
+    position: relative;
+    height: calc(100vh - 68px);
+    z-index: -1;
+}
+.landing .intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 100%;
+}
+.landing .intro h1 {
+    color: var(--main-color);
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+}
+.landing .intro p {
+    width: 300px;
+    font-size: 1.1875rem;
+    line-height: 1.6;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+/* the end */
+/* start the description */
+.description {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+    background-color: #f6f6f6;
+}
+.description .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+.description .container .magic,
+.description .container .jewelry,
+.description .container .earth {
+    padding: 1rem;
+}
+.description .container h3 {
+    font-weight: 800;
+    margin: 1rem 0;
+}
+.description .container p {
+    line-height: 1.7;
+    color: #777;
+    font-size: 0.9375rem;
+}
+.description .container i {
+    color: var(--main-color);
+}
+/* the end */
+/* Services */
+.services {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.services .heading {
+    text-align: center;
+    margin-bottom: 100px;
+
+}
+.services .heading h1 {
+    font-size: 100px;
+    color: rgb(227, 220, 220);
+}
+.services .heading p {
+    margin-top: -6rem;
+}
+.services .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.services .services-content .serves .web {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.services .services-content .serves h3 {
+    color: #666;
+    font-weight: 800;
+}
+.services .services-content .serves p {
+    color: rgb(145, 140, 140);
+    font-weight: 400;
+    line-height: 1.6;
+}
+.services .services-content img {
+    position: relative;
+}
+.services .services-content img:after {
+    content: "";
+}
+.services .services-content .serves i {
+    color: var(--main-color);
+}
+/* the end */
